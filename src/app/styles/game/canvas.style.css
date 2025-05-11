@@ -1,0 +1,7 @@
+body {
+  background-color: rgba(0, 0, 0, 0.69);
+}
+
+#game-window {
+  border: 1px solid black;
+}
