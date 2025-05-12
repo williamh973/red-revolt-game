@@ -1,13 +1,23 @@
-import { canvasParams } from "./canvas";
+import { canvasContext, gameVariables } from "./interface/gameVariables.js";
+import { player } from "./objects/player/player.class.js";
 
 const animate = () => {
   requestAnimationFrame(animate);
-  console.log("okayyy");
-  canvasParams.c.fillstyle = "white";
-  canvasParams.c.fillRect(
+  canvasContext.clearRect(
     0,
     0,
-    canvasParams.canvas.with,
-    canvasParams.canvas.height
+    gameVariables.canvas.width,
+    gameVariables.canvas.height
   );
+
+  canvasContext.fillStyle = "white";
+  canvasContext.fillRect(
+    0,
+    0,
+    gameVariables.canvas.width,
+    gameVariables.canvas.height
+  );
+
+  player.update();
 };
+animate();

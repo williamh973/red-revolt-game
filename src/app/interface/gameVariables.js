@@ -1,4 +1,5 @@
-const gameVariables = {
+export const gameVariables = {
+  canvas: document.getElementById("game-window"),
   scoreTag: document.getElementById("score"),
   userNameTag: document.getElementById("userName"),
   enemiesTag: document.getElementById("enemies"),
@@ -9,6 +10,7 @@ const gameVariables = {
   btnRestart: document.querySelector("#reload"),
   progScreen: document.getElementById("container-prog"),
   progBar: document.querySelector(".progress-bar"),
+  gravity: 0.2,
   score: 0,
   userName: "Parker",
   guards: 0,
@@ -19,3 +21,5 @@ const gameVariables = {
   isAreaLevelOneAdded: false,
   isAreaLevelTwoAdded: false,
 };
+
+export const canvasContext = gameVariables.canvas.getContext("2d");

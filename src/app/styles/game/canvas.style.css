@@ -1,7 +1,18 @@
 body {
-  background-color: rgba(0, 0, 0, 0.69);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.647);
+  display: flex;
 }
 
-#game-window {
-  border: 1px solid black;
+#game-window,
+#game-editor {
+  width: 800px;
+  height: 576px;
+  box-shadow: 0px 0px 20px 5px rgb(185, 185, 185);
+  margin: auto;
+}
+
+#game-editor {
+  display: none;
 }
